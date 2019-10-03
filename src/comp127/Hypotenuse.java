@@ -1,3 +1,6 @@
+package comp127;
+
+import java.util.Random;
 import java.util.Scanner;
 
 public class Hypotenuse {
@@ -17,11 +20,11 @@ public class Hypotenuse {
         double y = scan.nextDouble();
         double z = calculateHypotenuse(x,y);
         System.out.println(z);
-
-
-
-
-
-
     }
 }
+
+
+
+
+
+

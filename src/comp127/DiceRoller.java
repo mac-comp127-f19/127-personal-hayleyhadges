@@ -1,4 +1,6 @@
-package activityStarterCode.Objects;
+package comp127;
+
+import comp127.Die;
 
 /**
  * @author Chris Imholte and Hayley Hadges

@@ -1,4 +1,4 @@
-package activityStarterCode.Objects;
+package comp127;
 
 import java.util.Random;
 
