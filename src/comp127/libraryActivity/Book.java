@@ -6,7 +6,7 @@
  */
 package comp127.libraryActivity;
 
-public class Book {
+public class Book implements Media{
 
     private boolean isAvailable;
     private String title;

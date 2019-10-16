@@ -19,10 +19,10 @@ public class LibraryMain {
      * @param library list of library items
      * @return true if item checked out successfully, false otherwise
      */
-    public static boolean checkOut(String title, List<Book> library) {
-        for(Book book : library) {
-            if(book.getTitle().equalsIgnoreCase(title)) {
-                return book.checkOut();
+    public static boolean checkOut(String title, List<Media> library) {
+        for(Media item : library) {
+            if(item.getTitle().equalsIgnoreCase(title)) {
+                return item.checkOut();
             }
         }
 
@@ -37,10 +37,10 @@ public class LibraryMain {
      * @param library list of library items
      * @return true if item checked in successfully, false otherwise
      */
-    public static boolean checkIn(String title, List<Book> library) {
-        for(Book book : library) {
-            if(book.getTitle().equalsIgnoreCase(title)) {
-                return book.checkIn();
+    public static boolean checkIn(String title, List<Media> library) {
+        for(Media item : library) {
+            if(item.getTitle().equalsIgnoreCase(title)) {
+                return item.checkIn();
             }
         }
 
@@ -51,7 +51,7 @@ public class LibraryMain {
 
         // create/populate library
         // TODO: make this a list of Media objects, once your interface has been completed
-        List<Book> library = new ArrayList<>();
+        List<Media> library = new ArrayList<>();
 
         library.add(new Book("American Gods", "Neil Gaiman"));
         library.add(new Book("The Yiddish Policeman's Union", "Michael Chabon"));
@@ -61,7 +61,9 @@ public class LibraryMain {
 
         // TODO: add Video objects to your library, once the class has been created
         // If you create additional Media classes, add those items too!
-
+        library.add(new Video("Inception", "Neil Gaiman",12,12));
+        library.add(new Video("300", "Michael Chabon",8,8));
+        library.add(new Video("How to lose a Guy in 10 Days", "Claire Bennett",6,6));
 
         // begin user prompts
         System.out.println("Enter a command to perform an action. Type \'help\' to see the list of commands, and \'quit\' to exit.");
@@ -95,8 +97,8 @@ public class LibraryMain {
                 System.out.println("\n-----\nLibrary Inventory\n-----\n");
 
                 // TODO: edit this to work for all Media items
-                for(Book book : library) {
-                    System.out.println(book.toString());
+                for(Media item : library) {
+                    System.out.println(item.toString());
                 }
 
             } else { // invalid command
